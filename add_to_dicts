@@ -1,0 +1,62 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Mar 19 15:25:50 2019
+
+@author: Joan
+
+This program adds all the words in an Amazon review to 2 dictionaries (Good and Bad).
+
+"""
+
+import csv
+import json
+import re
+from collections import Counter
+from nltk.corpus import stopwords
+
+name_of_bad = str(input('Enter file name for bad dictionary:'))
+name_of_good = str(input('Enter file name for good dictionary:'))
+    
+# Read the csv file with scraped data
+with open('amazon_echodot_final.csv', mode = 'r', encoding = 'utf8') as infile:
+    reader = csv.reader(infile)
+    bad = []
+    good = []
+    # Iterates through each review
+    for rows in reader:
+        # Regular expression to remove fullstops, commas, brackets, etc
+        # Also converts all letters to lowercase
+        no_punct = re.sub(r'[.!,\[\]\$()\?\*]', '', rows[5]).lower()
+        # Splits string with no punctuations into elements in list by whitespaces
+        no_punct_split = no_punct.split()
+        # Set contains non-duplicate elements that are immutable (no list as element)
+        stop_words = set(stopwords.words('english'))
+        filtered_sentence = [w for w in no_punct_split if not w in stop_words]
+        
+        # If review is bad
+        if rows[6] == '1.0 out of 5 stars' or rows[6] == '2.0 out of 5 stars' or rows[6] == '3.0 out of 5 stars':
+            # Add these elements into existing list
+            bad.extend(filtered_sentence)
+            
+        # Else, if review is good
+        else:
+            good.extend(filtered_sentence)
+    
+    # Counts numbers of times an element appears in content list and returns a dictionary
+    # Keys are the words, values are the number of times the word appears
+    bad_dict = Counter(bad)
+    good_dict = Counter(good)
+         
+    
+    print(bad_dict)
+    # Prints number of key-value pairs in dictionary
+    print('Number of pairs in bad dict:', len(bad_dict))
+    print('\nNumber of pairs in good dict:', len(good_dict))
+
+# Dump dictionary into a json file
+bad_dict_json = name_of_bad + '.json'
+good_dict_json = name_of_good + '.json'
+with open(bad_dict_json, 'w') as fp:
+    json.dump(bad_dict, fp)
+with open(good_dict_json, 'w') as fp:
+    json.dump(good_dict, fp)
