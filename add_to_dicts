@@ -60,3 +60,6 @@ with open(bad_dict_json, 'w') as fp:
     json.dump(bad_dict, fp)
 with open(good_dict_json, 'w') as fp:
     json.dump(good_dict, fp)
+
+
+#Something weird
