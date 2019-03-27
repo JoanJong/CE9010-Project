@@ -4,3 +4,5 @@ Codes:
 2) echobad1.json and echogood1.json are the bad and good dictionaries respectively for a single product scraped
      - Number of pairs in bad dict: 6474
      - Number of pairs in good dict: 10957
+3) emojidict.py cleans string of emoji && updates emoji dictionary with frequency
+4) clean.py cleans good and bad dictionary of redundant words and accidental words
