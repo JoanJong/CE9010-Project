@@ -9,7 +9,10 @@ def extractemoji(string, emojidict):
                 emojidict[e]=emojidict.get(e)+1
             
             else:
-                emojidict.update({e:1})
+                if e == "♂" or e== "♀" :
+                    continue
+                else:
+                    emojidict.update({e:1})
         else:
             noemojistr+=e
     return noemojistr
