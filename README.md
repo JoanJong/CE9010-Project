@@ -6,7 +6,7 @@ Codes:
      - Number of pairs in good dict: 10957
 3) emojidict.py cleans string of emoji && updates emoji dictionary with frequency.
 4) clean.py cleans good and bad dictionary of redundant words and accidental words.
-5) ~~get_data_matrix.py gives data matrix from reviews.
+5) ~~get_data_matrix.py gives data matrix from reviews.~~~
      ~~- Column 1 (no. of bad words), Column 2 (no. of good words), Column 3 (no. of rating stars), Column 4 (no. of words in each review)~~
 6) identify_sentimental_words.py takes out adjectives and other sentiment-carrying words
 7) get_data_matrix.py (modified) gives data matrix from reviews.
