@@ -14,3 +14,4 @@ Codes:
 8) create_and_clean_dicts.py integrates all cleaning functions to create and clean dictionaries.
 9) all_clean_funcs.py is a collection of all cleaning functions.
 10) allbad.json and allgood.json are dictionaries created from 23147 reviews.
+11) all_out_mat.csv is the csv file of the data matrix created from get_data_matrix.py.
