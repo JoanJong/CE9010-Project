@@ -28,7 +28,7 @@ def remove_stop_words(review_list):
     
 def clean(bad_dict, good_dict, thresh):
     thresh = thresh
-    for bad_key, bad_val in list(bad_dict.items()): # Need to change to list otherwise gives 'dictionary changed size during iteration' error
+    for bad_key, bad_val in list(bad_dict.items()): # Need to make new list otherwise gives 'dictionary changed size during iteration' error
         for good_key, good_val in list(good_dict.items()):
             if bad_key == good_key:
                 if bad_val > good_val:
