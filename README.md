@@ -15,4 +15,14 @@ Codes:
 9) all_clean_funcs.py is a collection of all cleaning functions.
 10) allbad.json and allgood.json are dictionaries created from 23147 reviews.
 11) all_out_mat.csv is the csv file of the data matrix created from get_data_matrix.py.
-12) logreg_supervise_classification is the logistic regression classification with 2 features: good words and bad words
+12) foo.csv is the randomised version of all_out_mat.csv to ensure that a good mix of good and bad data is obtained in the training and in the test set
+     code used:
+     np.random.shuffle(data)
+     np.savetxt("foo.csv", data, delimiter=",")
+13) logreg_supervise_classification is the logistic regression classification with 2 features: good words and bad words
+14) All data scatter plot train+train.py plots scatter graph of all data points (training data + testing data)
+15) training data scatter plot.py plots scatter graph of all training points
+16) unsupervised clustering.py conducts unsupervised clustering of the data points into 2 clusters via k-means(k-fold) Prints precision and recall based on test results
+          Unresolved: cluster assigned to points (0 or 1) can be random and this affects precision and recall values
+          Proposed resolution: semi-supervised clustering
+
