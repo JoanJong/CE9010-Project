@@ -22,4 +22,4 @@ Codes:
 16) unsupervised clustering.py conducts unsupervised clustering of the data points into 2 clusters via k-means(k-fold) Prints precision and     recall based on test results
      * Unresolved: cluster assigned to points (0 or 1) can be random and this affects precision and recall values
      * Proposed resolution: semi-supervised clustering
-
+17) Quadratic_logreg quadratic logistic regression. Better result
