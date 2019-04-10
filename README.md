@@ -15,3 +15,4 @@ Codes:
 9) all_clean_funcs.py is a collection of all cleaning functions.
 10) allbad.json and allgood.json are dictionaries created from 23147 reviews.
 11) all_out_mat.csv is the csv file of the data matrix created from get_data_matrix.py.
+12) logreg_supervise_classification is the logistic regression classification
