@@ -23,3 +23,5 @@ Codes:
      * Unresolved: cluster assigned to points (0 or 1) can be random and this affects precision and recall values
      * Proposed resolution: semi-supervised clustering
 17) Quadratic_logreg quadratic logistic regression. Better result
+18) train_data, val_data and test_data are datasets obtained from splitting cleaned_revs
+19) train_data_mat, val_data_mat and test_data_mat are data matrices generated from their respective datasets
